@@ -159,8 +159,10 @@ function buildCharts(sample) {
         }];
 
     // 2. Create the layout for the bubble chart.
+//        var title = <h3>Bacteria Cultures per Sample</h3><br><p>Scrubs / Week</p>;
+
         var bubbleLayout = {
-            title: 'Bacteria Cultures per Sample',
+            title: "Bacteria Cultures per Sample",
             xaxis: {title: "OTU ID"},
             yaxis: {title: "Sample Values"},
             hovermode: "closest"
@@ -185,12 +187,15 @@ function gaugeChart(sample) {
     console.log(wfreq);
 
     // 4. Create the trace for the gauge chart.
+    var gauge_Title = 'Bacteria Cultures per Sample<br>' +
+            'Scrubs / Week';
     var gaugeData = [
         {
             type: "indicator",
             mode: "gauge+number",
             value: resultArray2[0].wfreq,
-            title: {text: "Belly Button Washing Frequency"},
+            title: gauge_Title,
+//            title: {text: "Belly Button Washing Frequency"},
             gauge: {
                 axis: {range: [null, 10], tickwidth: 2, tickcolor: "gray"},
                 bar: {color: "black"},
