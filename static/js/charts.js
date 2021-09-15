@@ -195,7 +195,6 @@ function gaugeChart(sample) {
             mode: "gauge+number",
             value: resultArray2[0].wfreq,
             title: gauge_Title,
-//            title: {text: "Belly Button Washing Frequency"},
             gauge: {
                 axis: {range: [null, 10], tickwidth: 2, tickcolor: "gray"},
                 bar: {color: "black"},
